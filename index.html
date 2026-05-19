@@ -1,0 +1,481 @@
+<!DOCTYPE html><html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Optic-Lux — Проверка зрения и подбор очков в Кишинёве</title>  <meta name="description" content="Проверка зрения, подбор очков и контактных линз в Кишинёве. Компьютерная диагностика зрения для взрослых и детей. Очки для компьютера, чтения и вождения." />  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #222;
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo h1 {
+      font-size: 28px;
+      color: #0b5ed7;
+    }
+
+    .logo p {
+      font-size: 14px;
+      color: #777;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0b5ed7;
+    }
+
+    .phone {
+      text-align: right;
+    }
+
+    .phone strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0b5ed7;
+      color: white;
+      padding: 14px 26px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #084298;
+    }
+
+    .hero {
+      padding: 80px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 54px;
+      margin-bottom: 25px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 35px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 25px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .feature {
+      background: #f5f7fa;
+      padding: 18px;
+      border-radius: 12px;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .gray {
+      background: #f7f7f7;
+    }
+
+    .section-title {
+      font-size: 42px;
+      margin-bottom: 25px;
+    }
+
+    .section-text {
+      max-width: 800px;
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    .steps {
+      display: grid;
+      gap: 25px;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: #0b5ed7;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+
+    .faq-item h3 {
+      margin-bottom: 10px;
+    }
+
+    .contact-box {
+      background: #111827;
+      color: white;
+      border-radius: 30px;
+      padding: 60px;
+    }
+
+    .contact-box h2 {
+      font-size: 48px;
+      margin-bottom: 25px;
+    }
+
+    .contact-box p {
+      color: #d1d5db;
+      margin-bottom: 35px;
+      font-size: 20px;
+    }
+
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid #eee;
+    }
+
+    footer p {
+      color: #666;
+    }
+
+    @media(max-width: 900px) {
+      .hero-grid,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 38px;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+
+      .contact-box {
+        padding: 35px;
+      }
+
+      .contact-box h2 {
+        font-size: 34px;
+      }
+    }
+  </style></head>
+<body><header>
+  <div class="container header-inner">
+    <div class="logo">
+      <h1>Optic-Lux</h1>
+      <p>Салон оптики и диагностики зрения</p>
+    </div><nav>
+  <a href="#diagnostic">Проверка зрения</a>
+  <a href="#glasses">Очки</a>
+  <a href="#lenses">Линзы</a>
+  <a href="#articles">Статьи</a>
+  <a href="#contacts">Контакты</a>
+</nav>
+
+<div class="phone">
+  <strong>+373 XX XXX XXX</strong>
+  <a href="#contacts" class="btn">Записаться</a>
+</div>
+
+  </div>
+</header><section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h2>Проверка зрения и подбор очков в Кишинёве</h2><p>
+    Компьютерная диагностика зрения, подбор очков и контактных линз
+    для взрослых и детей. Очки для компьютера, чтения, вождения и повседневной жизни.
+  </p>
+
+  <a href="#contacts" class="btn">Проверить зрение</a>
+
+  <div class="features">
+    <div class="feature">✓ Современное оборудование</div>
+    <div class="feature">✓ Очки для компьютера</div>
+    <div class="feature">✓ Контактные линзы</div>
+    <div class="feature">✓ Диагностика зрения</div>
+  </div>
+</div>
+
+<div class="hero-image">
+  <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1200&auto=format&fit=crop" alt="Проверка зрения">
+</div>
+
+  </div>
+</section><section class="gray">
+  <div class="container">
+    <h2 class="section-title">Когда стоит проверить зрение?</h2><p class="section-text">
+  Многие люди не замечают постепенного ухудшения зрения. Часто симптомы списывают на усталость,
+  возраст или работу за компьютером, хотя проблема может быть связана с миопией,
+  астигматизмом или неправильно подобранными очками.
+</p>
+
+<div class="cards">
+  <div class="card">
+    <h3>Устают глаза</h3>
+    <p>Повышенная нагрузка на зрение может вызывать напряжение и дискомфорт.</p>
+  </div>
+
+  <div class="card">
+    <h3>Головная боль</h3>
+    <p>Неправильная коррекция зрения часто вызывает головные боли.</p>
+  </div>
+
+  <div class="card">
+    <h3>Размытое зрение</h3>
+    <p>Если сложно видеть вдаль или читать мелкий текст — нужна диагностика.</p>
+  </div>
+</div>
+
+  </div>
+</section><section id="diagnostic">
+  <div class="container">
+    <h2 class="section-title">Как проходит диагностика зрения</h2><p class="section-text">
+  Проверка зрения включает консультацию специалиста, компьютерную диагностику,
+  определение параметров зрения и подбор очков или контактных линз.
+</p>
+
+<div class="steps">
+  <div class="step">
+    <div class="step-number">1</div>
+    <div>
+      <h3>Консультация</h3>
+      <p>Специалист уточняет жалобы и особенности зрительной нагрузки.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">2</div>
+    <div>
+      <h3>Компьютерная диагностика</h3>
+      <p>Проверка зрения вдаль и вблизи, определение астигматизма и миопии.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">3</div>
+    <div>
+      <h3>Подбор очков и линз</h3>
+      <p>Подбор коррекции с учётом образа жизни и работы за компьютером.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section><section id="glasses" class="gray">
+  <div class="container">
+    <h2 class="section-title">Очки для любых задач</h2><p class="section-text">
+  В салонах Optic-Lux подбираются очки для компьютера, чтения, вождения,
+  повседневной жизни и коррекции астигматизма.
+</p>
+
+<div class="cards">
+  <div class="card">
+    <h3>Очки для компьютера</h3>
+    <p>Снижают нагрузку на глаза при длительной работе за монитором.</p>
+  </div>
+
+  <div class="card">
+    <h3>Очки для чтения</h3>
+    <p>Комфортное зрение вблизи и снижение напряжения глаз.</p>
+  </div>
+
+  <div class="card">
+    <h3>Очки для вождения</h3>
+    <p>Улучшение контрастности и снижение бликов в дороге.</p>
+  </div>
+</div>
+
+  </div>
+</section><section id="lenses">
+  <div class="container">
+    <h2 class="section-title">Контактные линзы</h2><p class="section-text">
+  Контактные линзы требуют профессионального подбора. Даже при одинаковых диоптриях
+  разные линзы могут ощущаться совершенно по-разному.
+</p>
+
+<div class="cards">
+  <div class="card">
+    <h3>Однодневные линзы</h3>
+    <p>Максимальный комфорт и удобство использования.</p>
+  </div>
+
+  <div class="card">
+    <h3>Линзы при астигматизме</h3>
+    <p>Специальные решения для коррекции сложного зрения.</p>
+  </div>
+
+  <div class="card">
+    <h3>Первичный подбор</h3>
+    <p>Обучение использованию и рекомендации специалиста.</p>
+  </div>
+</div>
+
+  </div>
+</section><section id="articles" class="gray">
+  <div class="container">
+    <h2 class="section-title">Полезные статьи о зрении</h2><p class="section-text">
+  Экспертные статьи о зрении, очках, контактных линзах, астигматизме,
+  миопии и современных методах коррекции зрения.
+</p>
+
+<div class="cards">
+  <div class="card">
+    <h3>Устают глаза от компьютера — что делать</h3>
+    <p>Причины усталости глаз и современные способы решения проблемы.</p>
+  </div>
+
+  <div class="card">
+    <h3>Как понять, что нужны очки</h3>
+    <p>Основные признаки ухудшения зрения.</p>
+  </div>
+
+  <div class="card">
+    <h3>Что такое астигматизм</h3>
+    <p>Простое объяснение симптомов и способов коррекции.</p>
+  </div>
+</div>
+
+  </div>
+</section><section>
+  <div class="container">
+    <h2 class="section-title">Частые вопросы</h2><div class="faq-item">
+  <h3>Как часто нужно проверять зрение?</h3>
+  <p>Рекомендуется проходить диагностику зрения минимум один раз в год.</p>
+</div>
+
+<div class="faq-item">
+  <h3>Можно ли подобрать очки за один визит?</h3>
+  <p>Да, после диагностики специалист поможет подобрать подходящие линзы и оправу.</p>
+</div>
+
+<div class="faq-item">
+  <h3>Помогают ли компьютерные очки?</h3>
+  <p>Да, правильно подобранные линзы помогают снизить нагрузку на глаза.</p>
+</div>
+
+  </div>
+</section><section id="contacts">
+  <div class="container">
+    <div class="contact-box">
+      <h2>Запишитесь на проверку зрения</h2><p>
+    Своевременная диагностика помогает вовремя выявить ухудшение зрения
+    и подобрать комфортную коррекцию для работы, чтения и повседневной жизни.
+  </p>
+
+  <p>
+    <strong>Телефон:</strong> +373 XX XXX XXX<br>
+    <strong>Адрес:</strong> Кишинёв, ул. Example 10<br>
+    <strong>Время работы:</strong> Ежедневно 09:00–19:00
+  </p>
+
+  <a href="#" class="btn">Позвонить</a>
+</div>
+
+  </div>
+</section><footer>
+  <div class="container">
+    <p>
+      © Optic-Lux — Проверка зрения, подбор очков и контактных линз в Кишинёве.
+    </p>
+  </div>
+</footer></body>
+</html>
