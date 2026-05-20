@@ -339,15 +339,25 @@
 
 
     .header-inner {
-      flex-wrap: nowrap;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+      "logo nav"
+      ". phone";
+      align-items: center;
+      gap: 12px 20px;
+    }
+
+    .logo {
+      grid-area: logo;
     }
 
     nav {
-      gap: 10px;
+      grid-area: nav;
+      display: flex;
+      justify-content: flex-end;
+      gap: 14px;
       flex-wrap: nowrap;
-      flex: 1;
-      justify-content: center;
     }
 
     nav a {
@@ -356,9 +366,9 @@
     }
 
     .phone {
+      grid-area: phone;
       display: flex;
       justify-content: flex-end;
-      min-width: 150px;
     }
 
     .phone strong {
@@ -406,8 +416,8 @@
     @media(max-width: 1100px) {
 
       .header-inner {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
       }
 
       nav {
